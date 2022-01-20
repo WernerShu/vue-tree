@@ -77,6 +77,7 @@ export default {
   },
   computed: {
     childBind() {
+      this.getInitShowSelected();
       return Object.assign({}, this.$attrs, this.$props);
     }
   },
@@ -173,6 +174,12 @@ export default {
         this.setNodeAttr(previousNode, "selected", !selected);
       }
       this.radioNode = node;
+    },
+     getInitShowSelected() {
+      if (this.radio && this.$props.data[0] && this.$props.data[0].selected) {
+        this.radioNode = this.$props.data[0];
+        this.initShowSelectedNodes.push(this.$props.data[0])
+      }
     },
     // 对外暴露的方法,通过ref访问
 
