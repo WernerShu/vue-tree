@@ -251,7 +251,8 @@ export default {
     },
     checkedChange() {
       const { checked = false, parentCheckedToChildren = false } = this.item;
-      if(!this.scoped || !parentCheckedToChildren) {
+      // '||' changed to '&&' when 'scoped' to 'true' not for child nodes diagnosis
+      if(!this.scoped && !parentCheckedToChildren) {
         this.theParentChecked(checked, this.halfcheck);
       }
       if(parentCheckedToChildren) {
