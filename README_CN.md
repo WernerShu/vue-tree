@@ -13,7 +13,7 @@
 
 
 # SelectTree API
-最新的发布版本已经支持下拉树功能, 在基本属性和事件(与 [Tree API](https://github.com/halower/vue-tree/blob/master/README_CN.md#tree-api-%E6%96%87%E6%A1%A3)一致)不变的前提下扩展了如下 
+最新的发布版本已经支持下拉树功能, 在基本属性和事件(与 [Tree API](https://github.com/halower/vue-tree/blob/master/README_CN.md#tree-api-%E6%96%87%E6%A1%A3)一致)不变的前提下扩展了如下
 
 | 参数      | 说明    | 类型      | 可选值 | 默认值  |
 |---------- |-------- |---------- |---------- |---------- |
@@ -68,6 +68,7 @@ Vue.use (VSelectTree)
 |topMustExpand |  首层是否必须可展开 | Boolean | Y | true |
 |allowGetParentNode |  是否允许节点获取父节点 | Boolean | Y | false |
 |radio | selected 只允许单选 | Boolean | Y | false |
+|onlySelected | select事件只允许选中 | Boolean | Y | false |
 |selectAlone | select事件不影响checkbox | Boolean | Y | false |
 
 ### 方法

@@ -14,14 +14,14 @@ The document is poorly written and you are welcome to refine your documentation 
 [https://halower.github.io/vue-tree](http://120.77.84.4/)
 
 # SelectTree API
- The latest release has the ability to support the dropdown tree, extending the following with the same basic attributes and events (consistent with the [Tree API](https://github.com/halower/vue-tree#tree-api-doc)) 
- 
+ The latest release has the ability to support the dropdown tree, extending the following with the same basic attributes and events (consistent with the [Tree API](https://github.com/halower/vue-tree#tree-api-doc))
+
 | Parameters | Description | Type | Optional value |Default value |
 |---------- |-------- |---------- |---------- |---------- |
 |searchable | Search Functionality Required | Boolean | Y |true |
 |pleasechoosetext | Dropdown box default prompts this article | String | Y |Please choose ... |
-|searchtext | Search box default prompts this article | String | Y |Search ... | 
-|searchfilter | Custom search pull down tree filter function | Function | Y |node => node.title.indexOf (This.searchworld) > 1 | 
+|searchtext | Search box default prompts this article | String | Y |Search ... |
+|searchfilter | Custom search pull down tree filter function | Function | Y |node => node.title.indexOf (This.searchworld) > 1 |
  ## Effect Chart (no demo here, other effects like Onlinedemo)
 ![](https://github.com/halower/vue-tree/blob/master/screenshots/selectTree.png)
 ### How to use
@@ -68,6 +68,7 @@ Vue.use (VSelectTree)
 |topMustExpand |  the top level must can expand | Boolean | Y | true |
 |allowGetParentNode |  allow get the parent node | Boolean | Y | false |
 |radio | the selected node only one | Boolean | Y | false |
+|onlySelected | select Events can only be selected | Boolean | Y | false |
 |selectAlone | select is alone | Boolean | Y | false |
 
 ### method
