@@ -203,7 +203,6 @@ export default {
      *@param node current node
      */
     nodeSelected(node, position) {
-      console.log(node.parent())
       if( this.onlySelected && node.selected)return
       const selected = !node.selected;
       const changeCheck = this.multiple && !this.selectAlone;
