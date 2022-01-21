@@ -19,7 +19,8 @@ export default {
   },
   data() {
     return {
-      radioNode: null // 单选节点
+      radioNode: null, // 单选节点
+      initShowSelectedNodes: [] // 所有初始化时候的选中状态节点信息
     };
   },
   props: {
@@ -56,6 +57,11 @@ export default {
     },
     radio: {
       // 单选, selected节点至多可以选一个
+      type: Boolean,
+      default: false
+    },
+    onlySelected:{
+      // 只允许selected选中不允许取消
       type: Boolean,
       default: false
     },
@@ -197,6 +203,7 @@ export default {
      *@param node current node
      */
     nodeSelected(node, position) {
+      if( this.onlySelected && node.selected)return
       const selected = !node.selected;
       const changeCheck = this.multiple && !this.selectAlone;
       if (changeCheck) {
